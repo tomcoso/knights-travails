@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#board {
+  border: 2px solid #000;
+}
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#board > div > div {
+  width: 60px;
+  height: 60px;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+#board > .row {
+  display: flex;
+}
+
+#board .origin {
+  border: 2px solid red;
+  background-color: rgb(255, 0, 0);
+}
+#board .step {
+  border: 2px dashed orangered;
+  background-color: rgba(255, 69, 0, 0.5);
+  font-size: 1.8rem;
+}
+#board .target {
+  border: 2px solid green;
+  background-color: green;
+}
