@@ -6,6 +6,7 @@ console.log(PATH.join(" -> "));
 const BOARD = document.getElementById("board");
 
 const makeBoard = function (PATH) {
+  if (typeof PATH === "string") throw "Invalid Input";
   BOARD.replaceChildren();
   let length = 8;
   for (let i = length - 1; i >= 0; i--) {
@@ -40,3 +41,11 @@ const makeBoard = function (PATH) {
   });
 };
 makeBoard(PATH);
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  let newOrigin = document.querySelector("#origin").value;
+  let newTarget = document.querySelector("#target").value;
+  newOrigin = [+newOrigin[0], +newOrigin[newOrigin.length - 1]];
+  newTarget = [+newTarget[0], +newTarget[newTarget.length - 1]];
+  makeBoard(knightMoves(newOrigin, newTarget));
+});

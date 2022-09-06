@@ -8,6 +8,8 @@
 }
 body {
   display: flex;
+  flex-direction: column;
+  gap: 15px;
   width: 100vw;
   height: 100vh;
   justify-content: center;
@@ -38,4 +40,16 @@ body {
 #board .target {
   border: 2px solid green;
   background-color: green;
+}
+#new {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border: 2px solid #000;
+  padding: 10px;
+}
+#new input {
+  width: 5ch;
+  font-size: 1.2rem;
+  padding: 2px;
 }
